@@ -1,11 +1,12 @@
 import './App.css';
-import PersonalLogo from './PersonalLogo.png';
+import Home from './components/Home';
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 
 function App() {
   return (
     <div className="App">
-     <img src={PersonalLogo} alt="Logo"/>
+     <Home/>
     </div>
   );
 }
