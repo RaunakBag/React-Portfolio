@@ -34,7 +34,7 @@ function Header() {
         <Typed
           className="typed-text"
           strings={["HTML", "Javascript", "CSS", "React", "React Native"]}
-          typeSpeed={40}
+          typeSpeed={45}
           backSpeed={60}
           loop
         />
