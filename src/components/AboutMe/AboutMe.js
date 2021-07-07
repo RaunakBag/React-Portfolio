@@ -18,6 +18,10 @@ function AboutMe() {
             web development. I love to create and think outside the box when it
             comes to designing web sites. 
           </p>
+          <a href={Image} download="cosmelresume.pdf">
+            {" "}
+            <button className="btn btn-info"> Get my Resume</button>
+          </a>
         </div>
       </div>
     </div>

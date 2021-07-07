@@ -23,3 +23,9 @@
     position: relative;
     margin: 1rem;
   }
+  .image-box-wrapper{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }

@@ -1,6 +1,11 @@
 // FIXME: uupdate picture links
 import React from 'react'
 import Sudoku from './Sudoku.png'
+import Card from './Card.png'
+import Number from './Number.png'
+import SliderPuzzle from './SliderPuzzle.png'
+import ReactTodo from './ReactTodo.png'
+import Netflix from './Netflix.png'
 import './Portfolio.css'
 // Fontawesome Imports
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -11,8 +16,8 @@ import 'react-popupbox/dist/react-popupbox.css'
 
 // FIXME: update portfolio projects
 const Portfolio = () => {
-  // Spotsfan Cafe
-  const openPopupboxSportsFanCafe = () => {
+  // Sudoku
+  const openPopupboxSudoku = () => {
     const content = (
       <>
         <img
@@ -37,7 +42,7 @@ const Portfolio = () => {
           href='/'
           className='hyper-link'
           onClick={() =>
-            window.open('https://github.com/n305oul93/sportsfan-cafe-react')
+            window.open('https://github.com/RaunakBag/SudokuGame')
           }
         >
           Github Code
@@ -57,25 +62,24 @@ const Portfolio = () => {
     })
   }
 
-  // Mintbean Hackathon Project
-  const openPopupboxMintBean = () => {
+  // 2048
+  const openPopupboxCard = () => {
     const content = (
       <>
          <img
           className='portfolio-image-popupbox'
-          src={Sudoku}
-          alt='Sudoku'
+          src={Card}
+          alt='Card'
         />
         <p>
-          Alien vs. Editor Mintbean Hackaton Project built using React with
-          basic CRUD and authentication elements.
+          BlackJack game using HTML, CSS, JS
         </p>
         <a
           href='/'
           className='hyper-link'
           onClick={() =>
             window.open(
-              'https://our-mintbean-team.github.io/texteditor-mintbean/'
+              'https://raunakbag.github.io/CardGame/'
             )
           }
         >
@@ -85,7 +89,7 @@ const Portfolio = () => {
         <a
           href='/'
           className='hyper-link'
-          onClick={() => window.open('https://github.com/our-mintbean-team')}
+          onClick={() => window.open('https://github.com/RaunakBag/CardGame')}
         >
           Github Code
         </a>
@@ -96,7 +100,7 @@ const Portfolio = () => {
       config: {
         titleBar: {
           enable: true,
-          text: 'Text Editor | Mintbean Hackathon project'
+          text: 'Card Game'
         },
         fadeIn: true,
         fadeInSpeed: 500
@@ -104,20 +108,20 @@ const Portfolio = () => {
     })
   }
 
-  // IndyFi Project
-  const openPopupboxIndyFi = () => {
+  // Number Project
+  const openPopupboxNumber = () => {
     const content = (
       <>
-        {/* <img
+        <img
           className='portfolio-image-popupbox'
-          src={indyFi}
-          alt='IndyFi Project...'
-        /> */}
-        <p>Independent Sci-Fi film site built using React.</p>
+          src={Number}
+          alt='Number Project...'
+        />
+        <p>2048 Game using HTML, CSS, JS</p>
         <a
           href='/'
           className='hyper-link'
-          onClick={() => window.open('https://indyfi.netlify.app/')}
+          onClick={() => window.open('https://raunakbag.github.io/2048/')}
         >
           Link to demo
         </a>
@@ -126,7 +130,7 @@ const Portfolio = () => {
           href='/'
           className='hyper-link'
           onClick={() =>
-            window.open('https://github.com/n305oul93/indyfi-react')
+            window.open('https://github.com/RaunakBag/2048')
           }
         >
           Github Code
@@ -138,7 +142,7 @@ const Portfolio = () => {
       config: {
         titleBar: {
           enable: true,
-          text: 'IndyFi Independent Film Showcase project'
+          text: 'Number Independent Film Showcase project'
         },
         fadeIn: true,
         fadeInSpeed: 500
@@ -147,30 +151,116 @@ const Portfolio = () => {
   }
 
   // Book Store Ruby on Rails Project
-  const openPopupboxBookStoreRails = () => {
+  const openPopupboxSliderPuzzle = () => {
     const content = (
       <>
-        {/* <img
+        <img
           className='portfolio-image-popupbox'
-          src={bookStoreRails}
+          src={SliderPuzzle}
           alt='Book Store Ruby on Rails Project...'
-        /> */}
-        <p>Simple bookstore created using Ruby on Rails.</p>
-        {/* <a
+        />
+        <p>Image Puzzle using HTML, CSS, JS.</p>
+        <a
           href='/'
           className='hyper-link'
           onClick={() =>
-            window.open('https://github.com/n305oul93/bookstore_rails')
+            window.open('https://raunakbag.github.io/ImagePuzzle/')
           }
         >
           Link to demo
-        </a> */}
+        </a>
         <br />
         <a
           href='/'
           className='hyper-link'
           onClick={() =>
-            window.open('https://github.com/n305oul93/bookstore_rails')
+            window.open('https://github.com/RaunakBag/ImagePuzzle')
+          }
+        >
+          Github Code
+        </a>
+      </>
+    )
+    PopupboxManager.open({
+      content,
+      config: {
+        titleBar: {
+          enable: true,
+          text: 'Book Store Ruby on Rails project'
+        },
+        fadeIn: true,
+        fadeInSpeed: 500
+      }
+    })
+  }
+   // Book Store Ruby on Rails Project
+   const openPopupboxReactTodo = () => {
+    const content = (
+      <>
+        <img
+          className='portfolio-image-popupbox'
+          src={ReactTodo}
+          alt='Book Store Ruby on Rails Project...'
+        />
+        <p>TodoList using React.</p>
+        <a
+          href='/'
+          className='hyper-link'
+          onClick={() =>
+            window.open('https://raunakbag.github.io/React-TODO/')
+          }
+        >
+          Link to demo
+        </a>
+        <br />
+        <a
+          href='/'
+          className='hyper-link'
+          onClick={() =>
+            window.open('https://github.com/RaunakBag/React-TODO')
+          }
+        >
+          Github Code
+        </a>
+      </>
+    )
+    PopupboxManager.open({
+      content,
+      config: {
+        titleBar: {
+          enable: true,
+          text: 'Book Store Ruby on Rails project'
+        },
+        fadeIn: true,
+        fadeInSpeed: 500
+      }
+    })
+  }
+   // Book Store Ruby on Rails Project
+   const openPopupboxNetflix = () => {
+    const content = (
+      <>
+        <img
+          className='portfolio-image-popupbox'
+          src={Netflix}
+          alt='Book Store Ruby on Rails Project...'
+        />
+        <p>Netflix clone using React</p>
+        <a
+          href='/'
+          className='hyper-link'
+          onClick={() =>
+            window.open('https://netflix-clone-483f9.web.app/')
+          }
+        >
+          Link to demo
+        </a>
+        <br />
+        <a
+          href='/'
+          className='hyper-link'
+          onClick={() =>
+            window.open('https://github.com/RaunakBag/NetflixClone')
           }
         >
           Github Code
@@ -193,51 +283,75 @@ const Portfolio = () => {
   return (
     <div id='portfolio' className='portfolio-wrapper'>
       <div className='container'>
-        <h1 className='text-uppercase text-center py-5'>portfolio</h1>
-        <div className='image-box-wrapper row justify-content-center'>
+        <h1 className='text-uppercase text-center py-5'>projects</h1>
+        <div className='image-box-wrapper '>
           <div
             className='portfolio-image-box'
-            onClick={openPopupboxSportsFanCafe}
+            onClick={openPopupboxSudoku}
           >
-            {/* <img
-              src={sportsFanCafe}
-              alt='Sportsfan Cafe Project...'
+            <img
+              src={Sudoku}
+              alt='Sudoku'
               className='portfolio-image'
-            /> */}
+            />
             <div className='overflow'></div>
             <FontAwesomeIcon className='portfolio-icon' icon={faSearchPlus} />
           </div>
           {/* - */}
-          <div className='portfolio-image-box' onClick={openPopupboxMintBean}>
-            {/* <img
-              src={mintBean}
-              alt='Mintbean Hackathon Project...'
+          <div className='portfolio-image-box' onClick={openPopupboxCard}>
+            <img
+              src={Card}
+              alt='Card'
               className='portfolio-image'
-            /> */}
+            />
             <div className='overflow'></div>
             <FontAwesomeIcon className='portfolio-icon' icon={faSearchPlus} />
           </div>
           {/* - */}
-          <div className='portfolio-image-box' onClick={openPopupboxIndyFi}>
-            {/* <img
-              src={indyFi}
-              alt='IndyFi Project...'
+          <div className='portfolio-image-box' onClick={openPopupboxNumber}>
+            <img
+              src={Number}
+              alt='Number Project...'
               className='portfolio-image'
-            /> */}
+            />
             <div className='overflow'></div>
             <FontAwesomeIcon className='portfolio-icon' icon={faSearchPlus} />
           </div>
           {/* - */}
           <div
             className='portfolio-image-box'
-            onClick={openPopupboxBookStoreRails}
+            onClick={openPopupboxSliderPuzzle}
           >
-            {/* <img
-              src={bookStoreRails}
+            <img
+              src={SliderPuzzle}
               alt='Book Store Ruby on Rails Project...'
               className='portfolio-image'
             />
-            <div className='overflow'></div> */}
+            <div className='overflow'></div>
+            <FontAwesomeIcon className='portfolio-icon' icon={faSearchPlus} />
+          </div>
+          <div
+            className='portfolio-image-box'
+            onClick={openPopupboxReactTodo}
+          >
+            <img
+              src={ReactTodo}
+              alt='Sudoku'
+              className='portfolio-image'
+            />
+            <div className='overflow'></div>
+            <FontAwesomeIcon className='portfolio-icon' icon={faSearchPlus} />
+          </div>
+          <div
+            className='portfolio-image-box'
+            onClick={openPopupboxNetflix}
+          >
+            <img
+              src={Netflix}
+              alt='Sudoku'
+              className='portfolio-image'
+            />
+            <div className='overflow'></div>
             <FontAwesomeIcon className='portfolio-icon' icon={faSearchPlus} />
           </div>
         </div>
