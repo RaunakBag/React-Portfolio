@@ -25,3 +25,34 @@
   .footer p {
     margin-bottom: 0;
   }
+  .social-container {
+    background: black;
+    padding: 25px 50px;
+    margin-left: 15px;
+  }
+  a.social {
+    margin: 0 1rem;
+    transition: transform 250ms;
+    display: inline-block;
+  }
+  a.social:hover {
+    transform: translateY(-2px);
+  }
+  a.github {
+    color: #f1eaea;
+  }
+  
+  a.facebook {
+    color: #4968ad;
+  }
+  
+  a.twitter {
+    color: #49a1eb;
+  }
+  
+  a.linkedin {
+    color: #23b2eb;
+  }
+  .lastpart{
+    text-align: center;
+  }
