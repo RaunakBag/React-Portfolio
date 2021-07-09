@@ -18,9 +18,9 @@ const Footer = () => {
             <div className="d-flex">
               <p>Kolkata, West Bengal</p>
             </div>
-            <div className="d-flex">
+            {/* <div className="d-flex">
               <a href="tel:6290084083">6290084083</a>
-            </div>
+            </div> */}
             <div className="d-flex">
               <a href="mailto:raunakbag97@gmail.com">raunakbag97@gmail.com</a>
             </div>
