@@ -1,6 +1,6 @@
 import React from "react";
 import Typed from "react-typed";
-import { Link } from "react-scroll";
+// import { Link } from "react-scroll";
 import Particles from 'react-particles-js';
 import "./Header.css";
 
@@ -38,14 +38,14 @@ function Header() {
           backSpeed={60}
           loop
         />
-        <Link
+        {/* <Link
           smooth={true}
           to="contact"
           offset={-110}
           className="btn-main-offer"
         >
           contact me
-        </Link>
+        </Link> */}
       </div>
     </div>
   );

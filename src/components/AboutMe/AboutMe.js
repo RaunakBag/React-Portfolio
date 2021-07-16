@@ -1,6 +1,7 @@
 import React from "react";
 import "./AboutMe.css";
-import  Image from './Image.jpeg'
+import  CV from './CV.pdf'
+import Image from './Image.jpeg'
 
 function AboutMe() {
   return (
@@ -18,7 +19,7 @@ function AboutMe() {
             web development. I love to create and think outside the box when it
             comes to designing web sites. 
           </p>
-          <a href={Image} download="cosmelresume.pdf">
+          <a href={CV} download="CV.pdf">
             {" "}
             <button className="btn btn-info"> Get my Resume</button>
           </a>

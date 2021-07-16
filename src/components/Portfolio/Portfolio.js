@@ -6,6 +6,8 @@ import Number from './Number.png'
 import SliderPuzzle from './SliderPuzzle.png'
 import ReactTodo from './ReactTodo.png'
 import Netflix from './Netflix.png'
+import Amazon from './Amazon.png'
+import Slack from './Slack.png'
 import './Portfolio.css'
 // Fontawesome Imports
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -279,6 +281,90 @@ const Portfolio = () => {
       }
     })
   }
+  const openPopupboxAmazon = () => {
+    const content = (
+      <>
+        <img
+          className='portfolio-image-popupbox'
+          src={Amazon}
+          alt='Amazon'
+        />
+        <p>Amazon clone using React</p>
+        <a
+          href='/'
+          className='hyper-link'
+          onClick={() =>
+            window.open('https://fir-b70c3.web.app/')
+          }
+        >
+          Link to demo
+        </a>
+        <br />
+        <a
+          href='/'
+          className='hyper-link'
+          onClick={() =>
+            window.open('https://github.com/RaunakBag/AmazonClone')
+          }
+        >
+          Github Code
+        </a>
+      </>
+    )
+    PopupboxManager.open({
+      content,
+      config: {
+        titleBar: {
+          enable: true,
+          text: 'Book Store Ruby on Rails project'
+        },
+        fadeIn: true,
+        fadeInSpeed: 500
+      }
+    })
+  }
+  const openPopupboxSlack = () => {
+    const content = (
+      <>
+        <img
+          className='portfolio-image-popupbox'
+          src={Slack}
+          alt='Slack'
+        />
+        <p>Slack clone using React</p>
+        <a
+          href='/'
+          className='hyper-link'
+          onClick={() =>
+            window.open('https://slack-ron.web.app/')
+          }
+        >
+          Link to demo
+        </a>
+        <br />
+        <a
+          href='/'
+          className='hyper-link'
+          onClick={() =>
+            window.open('https://github.com/RaunakBag/Slack/tree/master')
+          }
+        >
+          Github Code
+        </a>
+      </>
+    )
+    PopupboxManager.open({
+      content,
+      config: {
+        titleBar: {
+          enable: true,
+          text: 'Book Store Ruby on Rails project'
+        },
+        fadeIn: true,
+        fadeInSpeed: 500
+      }
+    })
+  }
 
   return (
     <div id='portfolio' className='portfolio-wrapper'>
@@ -324,7 +410,7 @@ const Portfolio = () => {
           >
             <img
               src={SliderPuzzle}
-              alt='Book Store Ruby on Rails Project...'
+              alt='SliderPuzzle'
               className='portfolio-image'
             />
             <div className='overflow'></div>
@@ -336,7 +422,7 @@ const Portfolio = () => {
           >
             <img
               src={ReactTodo}
-              alt='Sudoku'
+              alt='ReactTodo'
               className='portfolio-image'
             />
             <div className='overflow'></div>
@@ -348,7 +434,31 @@ const Portfolio = () => {
           >
             <img
               src={Netflix}
-              alt='Sudoku'
+              alt='Netflix'
+              className='portfolio-image'
+            />
+            <div className='overflow'></div>
+            <FontAwesomeIcon className='portfolio-icon' icon={faSearchPlus} />
+          </div>
+          <div
+            className='portfolio-image-box'
+            onClick={openPopupboxAmazon}
+          >
+            <img
+              src={Amazon}
+              alt='Amazon'
+              className='portfolio-image'
+            />
+            <div className='overflow'></div>
+            <FontAwesomeIcon className='portfolio-icon' icon={faSearchPlus} />
+          </div>
+          <div
+            className='portfolio-image-box'
+            onClick={openPopupboxSlack}
+          >
+            <img
+              src={Slack}
+              alt='Slack'
               className='portfolio-image'
             />
             <div className='overflow'></div>
