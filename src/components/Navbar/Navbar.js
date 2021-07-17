@@ -16,7 +16,7 @@ const Navbar = () => {
           // offset={-110}
           className='nav-link'
         >
-         <img className='logo' src={PersonalLogo} alt="Logo"/>
+          <img className='logo' src={PersonalLogo} alt='logo...' />
         </Link>
         <button
           className='navbar-toggler'
@@ -30,7 +30,7 @@ const Navbar = () => {
           <FontAwesomeIcon icon={faBars} style={{ color: '#fff' }} />
         </button>
 
-        <div className='collapse navbar-collapse ' id='navbarSupportedContent'>
+        <div className='collapse navbar-collapse' id='navbarSupportedContent'>
           <ul className='navbar-nav ml-auto'>
             <li className='nav-item active'>
               <Link smooth={true} to='home' className='nav-link'>
@@ -69,10 +69,10 @@ const Navbar = () => {
                 offset={-110}
                 className='nav-link'
               >
-                projects
+                portfolio
               </Link>
             </li>
-            {/* <li className='nav-item'>
+            <li className='nav-item'>
               <Link
                 smooth={true}
                 to='contact'
@@ -81,7 +81,7 @@ const Navbar = () => {
               >
                 contact me
               </Link>
-            </li> */}
+            </li>
           </ul>
         </div>
       </div>

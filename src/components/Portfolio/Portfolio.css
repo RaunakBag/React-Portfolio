@@ -1,31 +1,31 @@
 :root {
-    --primary-light-grey: #f4f4f4;
-    --primary-green: #6bd425;
-  }
-  
-  /* ***************** Portfolio **************************** */
-  .portfolio-wrapper {
-    background: var(--primary-light-grey);
-    padding: 3rem 0;
-  }
-  
-  .portfolio-wrapper h1 {
-    color: var(--primary-green);
-  }
-  
-  .portfolio-image {
-    width: 15rem;
-    border: 1px solid var(--primary-green);
-    padding: 0 0.5rem;
-  }
-  
-  .portfolio-image-box {
-    position: relative;
-    margin: 1rem;
-  }
-  .image-box-wrapper{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    flex-direction: row;
-  }
+  --primary-light-grey: #f4f4f4;
+  --primary-green: #6bd425;
+}
+
+/* ***************** Portfolio **************************** */
+.portfolio-wrapper {
+  background: var(--primary-light-grey);
+  padding: 3rem 0;
+}
+
+.portfolio-wrapper h1 {
+  color: var(--primary-green);
+}
+
+.portfolio-image {
+  width: 15rem;
+  border: 1px solid var(--primary-green);
+  padding: 0 0.5rem;
+}
+
+.portfolio-image-box {
+  position: relative;
+  margin: 1rem;
+}
+.image-box-wrapper{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-direction: row;
+}

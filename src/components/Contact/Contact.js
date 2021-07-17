@@ -4,60 +4,155 @@ import { useForm } from 'react-hook-form'
 import './Contact.css'
 
 const Contact = () => {
-  const btn = document.getElementById('button');
+  const [successMessage, setSuccessMessage] = useState('')
 
-document.getElementById('form')
- .addEventListener('submit', function(event) {
-   event.preventDefault();
+  const { register, handleSubmit, errors } = useForm()
 
-   btn.value = 'Sending...';
+  const serviceID = process.env.REACT_APP_EMAILJS_SERVICE_ID
+  const templateID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID
+  const userID = process.env.REACT_APP_EMAILJS_USER_ID
 
-   const serviceID = 'service_jq01mrl';
-   const templateID = 'template_e3ko26f';
+  const onSubmit = (data, reset) => {
+    sendEmail(
+      serviceID,
+      templateID,
+      {
+        name: data.name,
+        phone: data.phone,
+        email: data.email,
+        subject: data.subject,
+        description: data.description
+      },
+      userID
+    )
+    reset.target.reset()
+  }
 
-   emailjs.sendForm(serviceID, templateID, this)
-    .then(() => {
-      btn.value = 'Send Email';
-      alert('Sent!');
-    }, (err) => {
-      btn.value = 'Send Email';
-      alert(JSON.stringify(err));
-    });
-});
+  function sendEmail(serviceID, templateID, variables, userID) {
+    emailjs
+      .send(serviceID, templateID, variables, userID)
+      .then(() => {
+        setSuccessMessage(
+          "Form sent successfully! I'll contact you as soon as possible."
+        )
+      })
+      .catch(err => console.error(`Something went wrong ${err}`))
+  }
+
   return (
-    <form id="form">
-  <div class="field">
-    <label for="subject">subject</label>
-    <input type="text" name="subject" id="subject"/>
-  </div>
-  <div class="field">
-    <label for="firstname">firstname</label>
-    <input type="text" name="firstname" id="firstname"/>
-  </div>
-  <div class="field">
-    <label for="lastname">lastname</label>
-    <input type="text" name="lastname" id="lastname"/>
-  </div>
-  <div class="field">
-    <label for="email">email</label>
-    <input type="text" name="email" id="email"/>
-  </div>
-  <div class="field">
-    <label for="phone">phone</label>
-    <input type="text" name="phone" id="phone"/>
-  </div>
-  <div class="field">
-    <label for="message">message</label>
-    <input type="text" name="message" id="message"/>
-  </div>
-  <div class="field">
-    <label for="reply_to">reply_to</label>
-    <input type="text" name="reply_to" id="reply_to"/>
-  </div>
-
-  <input type="submit" id="button" value="Send Email" />
-</form>
-
+    <div id='contact' className='contact'>
+      <div className='text-center'>
+        <h1>contact me</h1>
+        <p>
+          Please fill out the form and describe your project needs and I'll
+          contact you as soon as possible
+        </p>
+        <span className='success-message'>{successMessage}</span>
+      </div>
+      <div className='container'>
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <div className='row'>
+            <div className='col-md-6 col-xs-12'>
+              {/* NAME INPUT */}
+              <div className='text-center'>
+                <input
+                  type='text'
+                  className='form-control'
+                  placeholder='Name'
+                  name='name'
+                  ref={register({
+                    required: 'Please enter your name',
+                    maxLength: {
+                      value: 20,
+                      message:
+                        'Please enter a name with fewer than 20 characters'
+                    }
+                  })}
+                />
+                <div className='line'></div>
+              </div>
+              <span className='error-message'>
+                {errors.name && errors.name.message}
+              </span>
+              {/* Phone INPUT */}
+              <div className='text-center'>
+                <input
+                  type='text'
+                  className='form-control'
+                  placeholder='Phone Number'
+                  name='phone'
+                  ref={register({
+                    required: 'Please enter your phone'
+                  })}
+                />
+                <div className='line'></div>
+              </div>
+              <span className='error-message'>
+                {errors.phone && errors.phone.message}
+              </span>
+              {/* EMAIL INPUT */}
+              <div className='text-center'>
+                <input
+                  type='email'
+                  className='form-control'
+                  placeholder='Email'
+                  name='email'
+                  ref={register({
+                    required: 'Please enter your email',
+                    pattern: {
+                      value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                      message: 'Invalid Email'
+                    }
+                  })}
+                />
+                <div className='line'></div>
+              </div>
+              <span className='error-message'>
+                {errors.email && errors.email.message}
+              </span>
+              {/* Subject INPUT */}
+              <div className='text-center'>
+                <input
+                  type='text'
+                  className='form-control'
+                  placeholder='Subject'
+                  name='subject'
+                  ref={register({
+                    required: 'OOPS, you forgot to add the subject.'
+                  })}
+                />
+                <div className='line'></div>
+              </div>
+              <span className='error-message'>
+                {errors.subject && errors.subject.message}
+              </span>
+            </div>
+            <div className='col-md-6 col-xs-12'>
+              {/* DESCRIPTION */}
+              <div className='text-center'>
+                <textarea
+                  type='text'
+                  className='form-control'
+                  placeholder='Please briefly describe your project...'
+                  name='description'
+                  ref={register({
+                    required:
+                      'OOPS, you forgot to briefly describe your project...'
+                  })}
+                ></textarea>
+                <div className='line'></div>
+              </div>
+              <span className='error-message'>
+                {errors.description && errors.description.message}
+              </span>
+              <button type='submit' className='btn-main-offer contact-btn'>
+                contact me
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
   )
 }
 
