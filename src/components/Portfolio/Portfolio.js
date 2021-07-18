@@ -144,7 +144,7 @@ const Portfolio = () => {
       config: {
         titleBar: {
           enable: true,
-          text: 'Number Independent Film Showcase project'
+          text: '2048 game using HTML, CSS, JS'
         },
         fadeIn: true,
         fadeInSpeed: 500
@@ -159,7 +159,7 @@ const Portfolio = () => {
         <img
           className='portfolio-image-popupbox'
           src={SliderPuzzle}
-          alt='Book Store Ruby on Rails Project...'
+          alt='Slider Puzzle using HTML, CSS, JS'
         />
         <p>Image Puzzle using HTML, CSS, JS.</p>
         <a
@@ -188,7 +188,7 @@ const Portfolio = () => {
       config: {
         titleBar: {
           enable: true,
-          text: 'Book Store Ruby on Rails project'
+          text: 'Slider Puzzle using HTML, CSS, JS'
         },
         fadeIn: true,
         fadeInSpeed: 500
@@ -202,7 +202,7 @@ const Portfolio = () => {
         <img
           className='portfolio-image-popupbox'
           src={ReactTodo}
-          alt='Book Store Ruby on Rails Project...'
+          alt='Simple React Todo'
         />
         <p>TodoList using React.</p>
         <a
@@ -231,7 +231,7 @@ const Portfolio = () => {
       config: {
         titleBar: {
           enable: true,
-          text: 'Book Store Ruby on Rails project'
+          text: 'Simple React Todo'
         },
         fadeIn: true,
         fadeInSpeed: 500
@@ -245,7 +245,7 @@ const Portfolio = () => {
         <img
           className='portfolio-image-popupbox'
           src={Netflix}
-          alt='Book Store Ruby on Rails Project...'
+          alt='Netflix Clone using React'
         />
         <p>Netflix clone using React</p>
         <a
@@ -274,7 +274,7 @@ const Portfolio = () => {
       config: {
         titleBar: {
           enable: true,
-          text: 'Book Store Ruby on Rails project'
+          text: 'Netflix Clone using React'
         },
         fadeIn: true,
         fadeInSpeed: 500
@@ -316,7 +316,7 @@ const Portfolio = () => {
       config: {
         titleBar: {
           enable: true,
-          text: 'Book Store Ruby on Rails project'
+          text: 'Amazon Clone using React'
         },
         fadeIn: true,
         fadeInSpeed: 500
@@ -358,7 +358,7 @@ const Portfolio = () => {
       config: {
         titleBar: {
           enable: true,
-          text: 'Book Store Ruby on Rails project'
+          text: 'Slack Clone using React'
         },
         fadeIn: true,
         fadeInSpeed: 500
